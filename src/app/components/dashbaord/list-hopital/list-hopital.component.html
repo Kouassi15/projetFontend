@@ -1,0 +1,33 @@
+<div class="row">
+    <h2>Hopital List</h2>
+  </div>
+  
+  <table class="table table-striped table-bordered">
+    <thead>
+      <tr>
+        <th>#id</th>
+        <th>Nom</th>
+        <th>Longitude</th>
+        <th>Latitude</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+        <!-- <tr *ngFor="let commune of Communes">
+            <th scope="row">{{commune.id}}</th> -->
+            <!-- <td>{{nom}}</td>-->
+       <tr *ngFor="let hopital of Hopitals">
+        <td>{{ hopital.id}}</td> 
+        <td>{{ hopital.nom }}</td>
+        <td>{{ hopital.longitude }}</td>
+        <td>{{ hopital.latitud }}</td>
+        
+        <td>
+          <button (click)="updateHopital(hopital.id)" class="btn btn-primary">Update</button>
+          <button (click)="deleteHopital(hopital.id)" class="btn btn-danger" style="margin-left: 10px">Delete</button>
+          <button (click)="hopitalDetails(hopital.id)" class="btn btn-primary" style="margin-left: 10px">View</button>
+          <!-- <button routerLink="/enregistrer" class="btn btn-primary" style="margin-left: 10px">View</button> -->
+        </td>
+      </tr>
+    </tbody>
+  </table>

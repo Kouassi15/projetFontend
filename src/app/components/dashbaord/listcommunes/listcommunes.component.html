@@ -1,0 +1,75 @@
+<!-- <table class="table table-stripped">
+    <thead class="list">
+        <th>Sr. No</th>
+        <th> Nom</th>
+        <th>Actions</th>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let commune of communes; let i = index;">
+            <td>{{i+1}}</td>
+            <td>{{commune.nom}}</td>
+            <td>  <a href="edit/{{student.id}}" class="btn btn-success btn2">EDIT</a>    <button (click)="deleteCommunes(commune)" class="btn btn-danger"> Delete</button>  </td>
+        </tr>
+    </tbody>
+</table> -->
+<!-- <div class="container wrapper">
+    <div class="row"> -->
+        <!-- communes table -->
+        <!-- <div class="col-md-12">
+            <div class="inner">
+                <h3>My communes</h3>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col"> Nom</th>
+                            
+                            <th scope="col">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let commune of listcommune">
+                            <th scope="row">{{commune.id}}</th>
+                            <td>{{nom}}</td>
+                            
+                            <td>
+                                <button type="button" class="btn btn-success btn-sm move-right" routerLink="['dashbaord/editcommune', commune.id]">Edit</button>
+                                <button type="button" class="btn btn-danger btn-sm" (click)="deleteCommune(commune)">Remove</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div> -->
+<div class="row">
+    <h2>Commune List</h2>
+  </div>
+  
+  <table class="table table-striped table-bordered">
+    <thead>
+      <tr>
+        <th>#id</th>
+        <th>Nom</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+        <!-- <tr *ngFor="let commune of Communes">
+            <th scope="row">{{commune.id}}</th> -->
+            <!-- <td>{{nom}}</td>-->
+       <tr *ngFor="let commune of Communes">
+        <td>{{ commune.id}}</td> 
+        <td>{{ commune.nom }}</td>
+        
+        <td>
+          <button (click)="updateCommue(commune.id)" class="btn btn-primary">Update</button>
+          <button (click)="deleteCommune(commune.id)" class="btn btn-danger" style="margin-left: 10px">Delete</button>
+          <button (click)="communeDetails(commune.id)" class="btn btn-primary" style="margin-left: 10px">View</button>
+          <!-- <button routerLink="/enregistrer" class="btn btn-primary" style="margin-left: 10px">View</button> -->
+        </td>
+      </tr>
+    </tbody>
+  </table>

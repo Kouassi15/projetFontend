@@ -1,0 +1,45 @@
+<section class="h-100 h-custom" >
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-lg-8 col-xl-6">
+          <div class="card rounded-3">
+            <div class="container p-4 p-md-5">
+              <h3 class="mb-4 pb-2 pb-md-0 mb-md-5 px-md-2">Saissez le nom de l'hôpital</h3>
+              <div class="container">
+                <form [formGroup]="hopitalForm" (ngSubmit)="submitForm()">
+                    <div class="form-group mb-4">
+                      <input type="text" class="form-control" formControleName="nom" name="nom" id="nom" placeholder="Entrez le nom de l'hôpital">
+                    </div>
+
+                    <div class="form-group mb-4">
+                        <input type="text" class="form-control" formControleName="longitude" name="longitude" id="nom" placeholder="Entrez la longitude">
+                      </div>
+
+                      <div class="form-group mb-4">
+                        <input type="text" class="form-control" formControleName="latitude" name="latitude" id="nom" placeholder="Entrez latitude">
+                      </div>
+
+                    <div class="form-group mb-4">
+                      <label for="selection">Selectionner la specialite</label>
+                      <select id="selection" class="form-control">
+                        <option value="">Liste de choix...</option>
+                        <optgroup label="quartier">
+                          <option value="">PK18</option>
+                          <option value="">Option 2</option>
+                          <option value="">Option 3</option>
+                        </optgroup>
+                        <optgroup label="Groupe d'options 2">
+                          <option value="">Option 4</option>
+                          <option value="">Option 5</option>
+                        </optgroup>
+                      </select>
+                    </div>
+                    <button type="submit" class="btn btn-success btn-lg mb-1">Evoyer</button>
+                </form>
+               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
