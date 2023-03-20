@@ -11,7 +11,7 @@ import { RegisterService } from 'src/app/services/register.service';
 })
 export class RegisterComponent implements OnInit {
 
-  form!: FormGroup ;
+  form: any ;
    submitted = false;
    // vals = ''
   // data= this.vals.split(',');
@@ -30,69 +30,38 @@ export class RegisterComponent implements OnInit {
       email:['',[Validators.required,Validators.email]],
       username: ['', Validators.required],
       password:[ '',[Validators.required,Validators.maxLength(8)]],
-      confirmpassword: ['', [Validators.required,Validators.minLength(8)]],
+      confirmpassword: ['', [Validators.required,Validators.maxLength(8)]],
 
     });
     
   }
-   // getter pratique pour un accès facile aux champs du formulaire
-  // get f() { 
-  //   return this.form.controls; 
-  //   }
+  //  getter pratique pour un accès facile aux champs du formulaire
+  get f() { 
+    return this.form.controls; 
+    }
 
-    //   onSubmit(){
-  //     if (this.regiorm.invalid) {
-  //               return;
-  //           }
-  //     // console.log(this.registerForm.value);
+      submit(){
+      if (this.form.invalid) {
+                return;
+            }
       
-  //     this.userService.createUser(this.registerForm.value).subscribe(
-  //       (data:any)=>{
-  //         console.log(data);
-          
-  //          this.router.navigate(['/login-user']);  
-  //       },  
-  //      error => {  
-  //        alert(error);
-  //      });
-  //     // //afficher les valeurs du formulaire en cas de succès
-  //     // alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.registerForm.value, null, 4));
-  // }
-
-
-  submit(){
       this.registerService.createUser(this.form.value).subscribe(
         (data:any)=>{
+      console.log(this.form.value);
+
           console.log(data);
-          this.router.navigate(['/auth/login'])
-        }
-      );
-   }
+          
+          //  this.router.navigate(['/auth/login']);  
+        },  
+       error => {  
+         alert(error);
+       });
+      // //afficher les valeurs du formulaire en cas de succès
+      // alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.registerForm.value, null, 4));
   }
 
-  
-
-
-  //   onSubmit(){
-  //     if (this.registerForm.invalid) {
-  //               return;
-  //           }
-  //     // console.log(this.registerForm.value);
-      
-  //     this.userService.createUser(this.registerForm.value).subscribe(
-  //       (data:any)=>{
-  //         console.log(data);
-          
-  //          this.router.navigate(['/login-user']);  
-  //       },  
-  //      error => {  
-  //        alert(error);
-  //      });
-  //     // //afficher les valeurs du formulaire en cas de succès
-  //     // alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.registerForm.value, null, 4));
-  // }
-
-  // onReset() {
-  //     this.submitted = false;
-  //     this.registerForm.reset();
-  // }
+  onReset() {
+      this.submitted = false;
+      this.form.reset();
+  }
+}

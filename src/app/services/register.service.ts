@@ -21,7 +21,6 @@ export class RegisterService {
    }
 
    createUser(userData: any) {
-    //  const headers = new HttpHeaders().set('Access-Control-Allow-Origin', '*');
     return this.httpClient.post(this.baseURL + 'create/user', userData);
    }
 
