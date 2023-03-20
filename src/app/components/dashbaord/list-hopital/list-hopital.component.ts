@@ -16,9 +16,7 @@ export class ListHopitalComponent {
 
    constructor(
      private hopitalform : HopitalService ){ }  // Issues list
-    // listcommunes() {
-    // return this.listcommune = this.data;
-    //  }
+     
      ngOnInit() {
       this.getHopital();
     }

@@ -1,1 +1,37 @@
-<p>medecin works!</p>
+<section class="h-100 h-custom" >
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-lg-8 col-xl-6">
+          <div class="card rounded-3">
+            <div class="container p-4 p-md-5">
+              <h3 class="mb-4 pb-2 pb-md-0 mb-md-5 px-md-2">Saissez le specialiste</h3>
+              <div class="container">
+                <form  [formGroup]="medecinform" (ngSubmit)="onSubmit()">
+                    <div class="form-group mb-4">
+                      <input type="text" class="form-control" formControlName="nom" placeholder="Entrez votre nom ">
+                    </div>
+
+                    <div class="form-group mb-4">
+                        <input type="text" class="form-control" formControlName="prenom"  placeholder="Entrez votre prenom">
+                      </div>
+
+                      <div class="form-group mb-4">
+                        <input type="number" class="form-control" formControlName="telephone"  placeholder="Entrez votre numero">
+                      </div>
+
+                    <div class="form-group mb-4">
+                      <label for="selection">Selectionner la specialité</label>
+                      <select id="selection" formControlName="id_specialite" class="form-control">
+                        <option value="">Liste de choix...</option>
+                            <option *ngFor="let specialite of listspecialite" value="{{ specialite.id }}" > {{ specialite.nom }} </option>
+                      </select>
+                    </div>
+                <button type="submit" class="btn btn-success btn-lg mb-1">Evoyer</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>

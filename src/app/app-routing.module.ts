@@ -14,6 +14,11 @@ import { ListcommunesComponent } from './components/dashbaord/listcommunes/listc
 import { EditcommuneComponent } from './components/dashbaord/editcommune/editcommune.component';
 import { HopitalComponent } from './components/dashbaord/hopital/hopital.component';
 import { ListHopitalComponent } from './components/dashbaord/list-hopital/list-hopital.component';
+import { SpecialiteComponent } from './components/dashbaord/specialite/specialite.component';
+import { ListSpecialiteComponent } from './components/dashbaord/list-specialite/list-specialite.component';
+import { MedecinComponent } from './components/dashbaord/medecin/medecin.component';
+import { ListMedecinComponent } from './components/dashbaord/list-medecin/list-medecin.component';
+// import { SpecialiteComponent } from './components/page/specialite/specialite.component';
 
 const routes : Routes =  [
   {
@@ -70,11 +75,44 @@ const routes : Routes =  [
   path : 'dashbaord/hopital',
   component : HopitalComponent
 },
+
 {
   path :'dashbaord/list-hopital',
   component : ListHopitalComponent
-}
+},
 
+{
+  path : 'dashbaord/specialite',
+  component : SpecialiteComponent
+},
+
+{
+  path : 'dashbaord/list-specialite',
+  component : ListSpecialiteComponent
+},
+
+{
+  path : 'dashbaord/medecin',
+  component : MedecinComponent
+},
+{
+  path :'dashbaord/list-medecin',
+  component : ListMedecinComponent
+}
+// {
+//   path :'index',
+//  component : IndexComponent,
+//  children :[
+//   {
+//     path :'dashbaord/list-hopital',
+//     component : ListHopitalComponent
+//   },
+// {
+//   path : 'dashbaord/medecin',
+//   component : MedecinComponent
+// }
+//  ]
+// }
 ];
 
 @NgModule({

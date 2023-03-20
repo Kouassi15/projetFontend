@@ -1,1 +1,44 @@
-<p>specialite works!</p>
+<section class="h-100 h-custom" >
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-lg-8 col-xl-6">
+          <div class="card rounded-3">
+            <div class="container p-4 p-md-5">
+              <h3 class="mb-4 pb-2 pb-md-0 mb-md-5 px-md-2">Saissez la specialité</h3>
+              <div class="container">
+                <h1 *ngIf="enregistrer==1">la specialite a été enregistrée</h1>
+                <h1 *ngIf="enregistrer==0">la specialite existe deja</h1>
+                <form [formGroup]="specialiteform" >
+                    <div class="form-group mb-4">
+                      <input type="text" class="form-control" formControlName="nom" placeholder="Entrez la specialite">
+                    </div>
+
+                    <div class="form-group mb-4">
+                      <label for="selection">Selectionner le medecin</label>
+                      <select id="selection" formControlName="id_medecin" class="form-control">
+                        <option value="">Liste de choix...</option>
+                        <option *ngFor="let medecin of listmedecin" value="{{ medecin.id }}" > {{ medecin.nom }} </option>
+                      </select>
+                    </div>
+                    <div class="form-group mb-4">
+                        <label for="selection">Selectionner l'hopital </label>
+                        <select id="selection" formControlName="id_hopital" class="form-control">
+                          <option value="">Liste de choix...</option>
+                          <optgroup label="Hopital">
+                            <option *ngFor="let hopital of listhopital" value="{{ hopital.id }}" > {{ hopital.nom }} </option>
+                          </optgroup>
+                        
+                        </select>
+                      </div>
+                <!-- <button type="submit" class="btn btn-success btn-lg mb-1">Evoyer</button> -->
+                <input type="submit" value="add" (click)="onsubmit()">
+
+                
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>

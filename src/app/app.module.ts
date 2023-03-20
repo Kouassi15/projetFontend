@@ -13,7 +13,7 @@ import { HeaderComponent } from './components/page/header/header.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FooterComponent } from './components/page/footer/footer.component';
 import { CommuneComponent } from './components/froms/commune/commune.component';
-import { SpecialiteComponent } from './components/page/specialite/specialite.component';
+import { SpecialiteComponent } from './components/dashbaord/specialite/specialite.component';
 import { AddComponent } from './components/dashbaord/add/add.component';
 import { IndexComponent } from './components/dashbaord/index/index.component';
 import { ListcommunesComponent } from './components/dashbaord/listcommunes/listcommunes.component';
@@ -27,6 +27,9 @@ import { EditSpecialiteComponent } from './components/dashbaord/edit-specialite/
 import { MedecinComponent } from './components/dashbaord/medecin/medecin.component';
 import { ListMedecinComponent } from './components/dashbaord/list-medecin/list-medecin.component';
 import { EditMedecinComponent } from './components/dashbaord/edit-medecin/edit-medecin.component';
+import { PresentationComponent } from './components/page/presentation/presentation.component';
+import { NavbarsdashComponent } from './components/dashbaord/navbarsdash/navbarsdash.component';
+// import { NavbarComponent } from './components/dashbaord/navbar/navbar.component'
 
 @NgModule({
   declarations: [
@@ -53,6 +56,8 @@ import { EditMedecinComponent } from './components/dashbaord/edit-medecin/edit-m
     MedecinComponent,
     ListMedecinComponent,
     EditMedecinComponent,
+    PresentationComponent,
+    NavbarsdashComponent,
   ],
   imports: [
     BrowserModule,
