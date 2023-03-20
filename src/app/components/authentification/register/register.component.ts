@@ -36,9 +36,9 @@ export class RegisterComponent implements OnInit {
     
   }
    // getter pratique pour un accès facile aux champs du formulaire
-  get f() { 
-    return this.form.controls; 
-    }
+  // get f() { 
+  //   return this.form.controls; 
+  //   }
 
     //   onSubmit(){
   //     if (this.regiorm.invalid) {
