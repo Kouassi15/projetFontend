@@ -18,6 +18,7 @@ import { SpecialiteComponent } from './components/dashbaord/specialite/specialit
 import { ListSpecialiteComponent } from './components/dashbaord/list-specialite/list-specialite.component';
 import { MedecinComponent } from './components/dashbaord/medecin/medecin.component';
 import { ListMedecinComponent } from './components/dashbaord/list-medecin/list-medecin.component';
+import { GlobaleListComponent } from './components/page/globale-list/globale-list.component';
 // import { SpecialiteComponent } from './components/page/specialite/specialite.component';
 
 const routes : Routes =  [
@@ -45,6 +46,11 @@ const routes : Routes =  [
 
   {
     path :'contact', component : ContactComponent
+  },
+
+  {
+    path : 'page/globale-list',
+    component : GlobaleListComponent
   },
 
   {

@@ -13,31 +13,31 @@
 
                 <div class="form-outline mb-2">
                     <label class="form-label" for="form3Example1cg">Name</label>
-                  <input type="text" class="form-control form-control"formControlName="name" />
+                  <input type="text" class="form-control form-control"formControlName="firstname" />
                 </div>
 
                 <div class="form-outline mb-2">
                   <label class="form-label" for="form3Example1cg">Usernane</label>
-                <input type="text"  formControlName="username" class="form-control form-control"formControlName="username" />
+                <input type="text"   class="form-control form-control"formControlName="username" />
               </div>
 
                 <div class="form-outline mb-2">
                     <label class="form-label" for="form3Example3cg"> Email</label>
-                  <input type="email"  formControlName="email" class="form-control form-control" formControlName="email"/>
+                  <input type="email"   class="form-control form-control" formControlName="email"/>
                 </div>
 
                 <div class="form-outline mb-2">
                     <label class="form-label" for="form3Example4cg">Password</label>
-                  <input type="password"  formControlName="password" class="form-control form-control" formControlName="password"/>
+                  <input type="password"   class="form-control form-control" formControlName="password"/>
                 </div>
 
-                <div class="form-outline mb-2">
+                <!-- <div class="form-outline mb-2">
                     <label class="form-label" for="form3Example4cdg">Confirm password</label>
                   <input type="password"  class="form-control form-control" formControlName="confirmpassword" />
-                </div><br>
-                <div class="d-flex justify-content-center">
+                </div><br> -->
+                <div class="d-flex justify-content-center"> 
                   <button type="submit"
-                    class="btn btn-success btn-block btn-lg gradient-custom-4 text-body">Register</button>
+                    class="btn btn-success btn-block btn-lg gradient-custom-4 text-body" routerLink="/auth/login">Register</button>
                 </div>
               </form>
 

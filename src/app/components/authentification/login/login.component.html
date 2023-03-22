@@ -1,29 +1,29 @@
 <app-navbar></app-navbar>
-<section>
-    <!-- Background image -->
-    <div id="intro" class="bg-image shadow-2-strong">
-        <div class="mask d-flex align-items-center h-100" style="background-color: rgba(0, 0, 0, 0.8);">
-          <div class="container">
+<!-- <section>
+     Background image -->
+    <!-- <div id="intro" class="bg-image shadow-2-strong">
+        <div class="mask d-flex align-items-center h-100" style="background-color: rgba(0, 0, 0, 0.8);"> -->
+          <!-- <div class="container">
             <div class="row justify-content-center">
               <div class="col-xl-5 col-md-8">
-                <form class="bg-white  rounded-5 shadow-5-strong p-5">
+                <form class="bg-white  rounded-5 shadow-5-strong p-5"> -->
                   <!-- Email input -->
-                  <div class="form-outline mb-4">
+                  <!-- <div class="form-outline mb-4">
                     <label class="form-label" for="form1Example1">Email address</label>
                     <input type="email" id="form1Example1" class="form-control" formControlName = "email" />
-                  </div>
+                  </div> -->
   
                   <!-- Password input -->
-                  <div class="form-outline mb-4">
+                  <!-- <div class="form-outline mb-4">
                     <label class="form-label" for="form1Example2">Password</label>
                     <input type="password" id="form1Example2" class="form-control" formControlName = "password"/>
-                  </div>
+                  </div> -->
   
                   <!-- 2 column grid layout for inline styling -->
-                  <div class="row mb-4">
-                    <div class="col d-flex justify-content-center">
+                  <!-- <div class="row mb-4">
+                    <div class="col d-flex justify-content-center"> -->
                       <!-- Checkbox -->
-                      <div class="form-check">
+                      <!-- <div class="form-check">
                         <input class="form-check-input" type="checkbox" value="" id="form1Example3" checked />
                         <label class="form-check-label" for="form1Example3">
                           Remember me
@@ -31,19 +31,63 @@
                       </div>
                     </div>
   
-                    <div class="col text-center">
+                    <div class="col text-center"> -->
                       <!-- Simple link -->
-                      <a href="#!">Forgot password?</a>
+                      <!-- <a href="#!">Forgot password?</a>
                     </div>
                   </div>
-  
+   -->
                   <!-- Submit button -->
-                  <button type="submit" class="btn btn-success btn-block gradient-custom-4 text-body">Login</button>
+                  <!-- <button type="submit" class="btn btn-success btn-block gradient-custom-4 text-body">Login</button>
                 </form>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
       <!-- Background image -->
+<!-- </section> -->
+<section class="vh-90 bg-image"
+  style="background-image: url('https://mdbcdn.b-cdn.net/img/Photos/new-templates/search-box/img4.webp');">
+  <div class="mask d-flex align-items-center h-100 gradient-custom-3">
+    <div class="container h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+          <div class="card mt-5" style="border-radius: 15px;">
+            <div class="card-body p-4">
+              <h2 class="text-uppercase text-center mb-2">Login</h2>
+
+              <form [formGroup]="form" (ngSubmit)="submit()" >
+
+                <div class="form-outline mb-2">
+                  <label class="form-label" for="form3Example1cg">Usernane</label>
+                <input type="text"   class="form-control form-control"formControlName="username" />
+              </div>
+                <div class="form-outline mb-2">
+                    <label class="form-label" for="form3Example4cg">Password</label>
+                  <input type="password"   class="form-control form-control" formControlName="password"/>
+                </div>
+
+                 <div class="row mb-4">
+                    <div class="col d-flex justify-content-center"> 
+                      <!-- Checkbox -->
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="form1Example3" checked />
+                        <label class="form-check-label" for="form1Example3">
+                          Remember me
+                        </label>
+                      </div>
+                    </div><br>
+                <div class="d-flex justify-content-center"> 
+                  <button type="submit"
+                    class="btn btn-success btn-block btn-lg gradient-custom-4 text-body" routerLink="/page/header">Register</button>
+                </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>

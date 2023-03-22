@@ -1,0 +1,35 @@
+<app-navbar></app-navbar>
+
+  <h5 class="text-center p-4">Listes des medecins specialistes disponibles</h5>
+<div class="row mt-5">
+  <div class="col-2"></div>
+  <ng-container *ngFor="let medecin of listeMedecinSpecialite">
+    <div class="col-sm-4">
+      <div class="card text-center">
+        <div class="card-body">
+          <img src="https://cmi.ch/montana/wp-content/uploads/sites/5/2019/06/avatar-670x500.jpg" alt="Avatar"
+            class="avatar">
+          <ng-container *ngFor="let item of medecin.specialite">
+            <h4>{{item.nom}}</h4>
+          </ng-container>
+          <h3 class="card-title">{{medecin.nom}} {{medecin.prenom}}</h3>
+          <h4>{{medecin.contact}}</h4>
+        </div>
+      </div>
+      <br>
+    </div>
+    
+  </ng-container>
+  <div class="col-2 m-3"></div>
+</div>
+<ng-container *ngIf="listeMedecinSpecialite.length == 0">
+
+  <div class="px-4 pt-5 my-5 text-center border-bottom">
+    <h1 class="display-4 fw-bold">Pas de medecin trouve pour la specialite demandee</h1>
+    <div class="col-lg-6 mx-auto">
+      <p class="lead mb-4">effectuer une nouvelle recherche <a routerLink="/page/nos-service">ici</a></p>
+    </div>
+
+  </div>
+
+</ng-container>

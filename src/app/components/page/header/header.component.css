@@ -1,8 +1,38 @@
-.masthead {
-    height: 100vh;
-    min-height: 500px;
-    background-image: url('https://source.unsplash.com/BtbjCFUvBXs/1920x1080');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
+#intro-example {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("https://images.bfmtv.com/JFNDcfRFmZtmtBHYH2n8CqzNDE4=/0x40:768x472/768x0/images/Un-malade-du-Covid-19-dans-le-service-de-reanimation-de-l-hopital-Delafontaine-de-Saint-Denis-dans-la-banlieue-de-Paris-le-29-mars-2021-998219.jpg");
+  background-color: rgba(0, 0, 0, 0.8) !important;
+  height: 500px;
+}
+
+
+#intro-example .text-white {
+  text-align: center;
+}
+
+h1 {
+  font-size: 3rem;
+  color: chocolate
+}
+
+h5 {
+  font-size: 1.5rem;
+  color: #1E3A8A
+}
+
+
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.col-md-6 {
+  width: 100%; 
+  max-width: 400px; 
+  text-align: center; 
+}

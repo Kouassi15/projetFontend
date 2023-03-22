@@ -29,6 +29,7 @@ import { ListMedecinComponent } from './components/dashbaord/list-medecin/list-m
 import { EditMedecinComponent } from './components/dashbaord/edit-medecin/edit-medecin.component';
 import { PresentationComponent } from './components/page/presentation/presentation.component';
 import { NavbarsdashComponent } from './components/dashbaord/navbarsdash/navbarsdash.component';
+import { GlobaleListComponent } from './components/page/globale-list/globale-list.component';
 // import { NavbarComponent } from './components/dashbaord/navbar/navbar.component'
 
 @NgModule({
@@ -58,6 +59,7 @@ import { NavbarsdashComponent } from './components/dashbaord/navbarsdash/navbars
     EditMedecinComponent,
     PresentationComponent,
     NavbarsdashComponent,
+    GlobaleListComponent,
   ],
   imports: [
     BrowserModule,
